@@ -1,10 +1,17 @@
 package algorithm.sort;
 
+import java.util.Arrays;
+
 public class sMain {
     public static void main(String[] args) {
-        InsSort insSort = new InsSort();
-        int[] arr = new int[]{3,6,1,2,8};
-        insSort.insSort01(arr);
+        int[] arr = new int[]{28,4,23,45,3,33,7,55,12,9,19,16,2,10,8};
+        // 插入排序
+        InsSort.insSort01(arr.clone());
+        // 选择排序
+        SelectionSort.sort(arr.clone());
+        // 冒泡排序
+        BubSort.sort(arr.clone());
+
 
     }
 }
