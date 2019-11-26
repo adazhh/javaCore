@@ -37,6 +37,4 @@ public class O22PrintFromTopToBottom {
             this.val = val;
         }
     }
-
-    public void
 }
