@@ -30,7 +30,6 @@ public class test {
         i1++;
         System.out.println(i1 == i2);
         System.out.println(i1.equals(i2));
-        nuA(null);
 
         System.out.println("===========");
         Object o1 = new Object();
@@ -41,17 +40,5 @@ public class test {
         }else {
             System.out.println("not null");
         }
-    }
-    public static void nuA(Integer integer){
-        integer = integer * 2;
-    }
-
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.add(2);
-        Integer n = linkedList.removeFirst();
-        if (linkedList.size() == 0) System.out.println("is empty");
-        linkedList.add(3);
-        linkedList.add(4);
-        System.out.println(linkedList.toString());
     }
 }

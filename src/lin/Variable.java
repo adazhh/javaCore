@@ -23,7 +23,17 @@ public class Variable {
 
 	private int list;//记录等候替补客户名单；
 
-	public Variable(int id, String flight_number,String start, String destination, String flight_date, int number,int surplus,int customer,String grade,int list){
+	private Variable next;
+
+	public Variable getNext() {
+		return next;
+	}
+
+	public void setNext(Variable next) {
+		this.next = next;
+	}
+
+	public Variable(int id, String flight_number, String start, String destination, String flight_date, int number, int surplus, int customer, String grade, int list){
 
 		this.id = id;
 
@@ -46,6 +56,8 @@ public class Variable {
 		this.list = list;
 
 	}
+	// 构造方法
+	public Variable(){}
 
 	//Id
 

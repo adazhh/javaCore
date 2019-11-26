@@ -11,11 +11,16 @@ public class Method {
 
 	public void all_flight(ArrayList<Variable> flight){
 
-		System.out.println("编号\t 航班号\t起始地\t目的地\t起飞日期\t\t成员定额\t\t余票量\t已订票票的客户人数\t舱位等级\t\t等候替补客户人数");
+		System.out.println("编号\t 航班号\t起始地\t目的地\t" +
+				"起飞日期\t\t成员定额\t\t余票量\t已订票票的客户人数" +
+				"\t舱位等级\t\t等候替补客户人数");
 
 		for(Variable e:flight)  //增强for循环，遍历
 
-			System.out.println(e.getId()+"\t"+e.getFlight_number()+"\t"+e.getStart()+"\t"+e.getDestination()+"\t"+e.getFlight_date()+"\t"+e.getNumber()+"\t"+"\t"+e.getSurplus()+"\t"+"\t"+e.getCustomer()+"\t"+"\t"+e.getGrade()+"\t"+"\t"+"\t"+e.getList());
+			System.out.println(e.getId()+"\t"+e.getFlight_number()+"\t"+
+					e.getStart()+"\t"+e.getDestination()+"\t"+e.getFlight_date()+
+					"\t"+e.getNumber()+"\t"+"\t"+e.getSurplus()+"\t"+"\t"+
+					e.getCustomer()+"\t"+"\t"+e.getGrade()+"\t"+"\t"+"\t"+e.getList());
 
 	}
 
@@ -35,9 +40,15 @@ public class Method {
 
 			if(e.getFlight_date().equals(date)){
 
-				System.out.println("编号\t 航班号\t起始地\t目的地\t起飞日期\t\t成员定额\t\t余票量\t已订票票的客户人数\t舱位等级\t\t等候替补客户人数");
+				System.out.println("编号\t 航班号\t起始地\t目的地\t" +
+						"起飞日期\t\t成员定额\t\t余票量\t已订票票的客户人数\t" +
+						"舱位等级\t\t等候替补客户人数");
 
-				System.out.println(e.getId()+"\t"+e.getFlight_number()+"\t"+e.getStart()+"\t"+e.getDestination()+"\t"+e.getFlight_date()+"\t"+e.getNumber()+"\t"+"\t"+e.getSurplus()+"\t"+"\t"+e.getCustomer()+"\t"+"\t"+e.getGrade()+"\t"+"\t"+"\t"+e.getList());
+				System.out.println(e.getId()+"\t"+e.getFlight_number()
+						+"\t"+e.getStart()+"\t"+e.getDestination()+"\t"+
+						e.getFlight_date()+"\t"+e.getNumber()+"\t"+"\t"+
+						e.getSurplus()+"\t"+"\t"+e.getCustomer()+"\t"+"\t"+e.getGrade()
+						+"\t"+"\t"+"\t"+e.getList());
 
 			}
 
@@ -61,9 +72,13 @@ public class Method {
 
 			if(e.getDestination().equals(destination)){
 
-				System.out.println("编号\t 航班号\t起始地\t目的地\t起飞日期\t\t成员定额\t\t余票量\t已订票票的客户人数\t舱位等级\t\t等候替补客户人数");
+				System.out.println("编号\t 航班号\t起始地\t目的地\t起飞日期\t\t" +
+						"成员定额\t\t余票量\t已订票票的客户人数\t舱位等级\t\t等候替补客户人数");
 
-				System.out.println(e.getId()+"\t"+e.getFlight_number()+"\t"+e.getStart()+"\t"+e.getDestination()+"\t"+e.getFlight_date()+"\t"+e.getNumber()+"\t"+"\t"+e.getSurplus()+"\t"+"\t"+e.getCustomer()+"\t"+"\t"+e.getGrade()+"\t"+"\t"+"\t"+e.getList());
+				System.out.println(e.getId()+"\t"+e.getFlight_number()+"\t"+e.getStart()+"\t"+
+						e.getDestination()+"\t"+e.getFlight_date()+"\t"+e.getNumber()+"\t"+
+						"\t"+e.getSurplus()+"\t"+"\t"+e.getCustomer()+"\t"+"\t"+e.getGrade()+
+						"\t"+"\t"+"\t"+e.getList());
 
 			}
 
