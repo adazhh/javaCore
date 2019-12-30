@@ -2,43 +2,47 @@ import java.util.*;
 
 public class test {
     public static void main(String[] args) {
+        // Singleton singleton = Singleton.getInstance();
+        Singleton.Order();
+        System.out.println("---------------");
+        System.out.println(Singleton.numA);
+        System.out.println(Singleton.numB);
+    }
+}
+class Singleton{
+    public static int numA = 10;
+    public static Singleton singleton = new Singleton();
 
-        // ArrayList不能跨位置添加元素
+    static {
+        System.out.println("first");
+    }
+    private Singleton(){
+        System.out.println("Construct method");
+        System.out.println("construct numA and numB:" + numA + numB);
+        numA++;
+        numB++;
+        System.out.println("numA: " + numA);
+        System.out.println("numB: " + numB);
+    }
+    static {
+        System.out.println("before numB");
+    }
+    public static int numB = 8;
+    public static Singleton getInstance(){
+        System.out.println("getInstance method");
+        System.out.println("getInstance numB: " + numB);
+        System.out.println("getInstance numB: " + numA);
+        return singleton;
+    }
 
-        // ArrayList<String> list = new ArrayList<>(100);
-        // System.out.println(list.size());
-        // list.add(2, "hello");
-
-        String a  = "CAT";
-        String b = a;
-        a = a.toLowerCase();
-        a.replace("c", "W");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(a==b);
-        System.out.println(a.equals(b));
-        System.out.println(a.toLowerCase());
-        System.out.println(b.replace("C", "w"));
-        System.out.println(b);
-
-        System.out.println("--------------------");
-
-        Integer i1 = 2;
-        Integer i2 = i1;
-        System.out.println(i1 == i2);
-        System.out.println(i1.equals(i2));
-        i1++;
-        System.out.println(i1 == i2);
-        System.out.println(i1.equals(i2));
-
-        System.out.println("===========");
-        Object o1 = new Object();
-        // 集合不能用null来判断，要用empty()
-        Stack<Object> stack = new Stack<>();
-        if (stack == null){
-            System.out.println("is null");
-        }else {
-            System.out.println("not null");
-        }
+    public static void Order(){
+        System.out.println("Order numB: " + numB);
+        numB = 323;
+        System.out.println("Order numB: " + numB);
+    }
+    static {
+        System.out.println("last");
+        System.out.println("last: " + numB);
+        numB = 50;
     }
 }

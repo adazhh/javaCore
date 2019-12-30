@@ -1,5 +1,7 @@
 package WriteTest;
 
+import java.util.Collections;
+
 public class Test01 {
     public static void main(String[] args) {
         String  line = "RLLR";
