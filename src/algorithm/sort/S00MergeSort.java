@@ -3,7 +3,7 @@ package algorithm.sort;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MergeSort {
+public class S00MergeSort {
     public static void sort(int[] arr){
         mergeSort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));

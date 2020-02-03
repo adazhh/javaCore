@@ -2,7 +2,7 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
-public class QuickSort {
+public class S00QuickSort {
     public static void sort(int[] arr){
         quick(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
