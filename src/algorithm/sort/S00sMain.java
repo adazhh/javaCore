@@ -10,7 +10,7 @@ public class S00sMain {
         // 冒泡排序
         S00BubSort.sort(arr.clone());
         // 快速排序
-        S00QuickSort.sort(arr.clone());
+        S00_QuickSort3.sort(arr.clone());
         // 归并排序
         S00MergeSort.sort(arr.clone());
 
