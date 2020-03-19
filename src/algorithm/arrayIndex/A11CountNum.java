@@ -17,7 +17,7 @@ public class A11CountNum {
                 }
                 minList.add(j);
                 while (!maxList.isEmpty() && arr[maxList.peekLast()] <= arr[j]){
-                    maxList.peekLast();
+                    maxList.pollLast();
                 }
                 maxList.add(j);
                 if ((arr[maxList.peek()] - arr[minList.peek()]) > num){
@@ -35,5 +35,10 @@ public class A11CountNum {
             i++;
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{2};
+        System.out.println(count(arr, 2));
     }
 }

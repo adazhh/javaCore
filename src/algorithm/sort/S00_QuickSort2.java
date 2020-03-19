@@ -2,7 +2,10 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
-public class S00_QuickSort2 {
+public class
+
+
+S00_QuickSort2 {
     public static void quickSort(int[] arr){
         if (arr == null || arr.length < 2) return;
         quickSort(arr, 0, arr.length - 1);

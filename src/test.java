@@ -1,48 +1,55 @@
+import java.awt.geom.Ellipse2D;
 import java.util.*;
 
 public class test {
     public static void main(String[] args) {
-        // Singleton singleton = Singleton.getInstance();
-        Singleton.Order();
-        System.out.println("---------------");
-        System.out.println(Singleton.numA);
-        System.out.println(Singleton.numB);
+        String str = "London bridge is falling down";
+        char[] chars = str.toCharArray();
+        int first = 0;
+        int last = 0;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == ' '){
+                last = i - 1;
+                reverse(chars, first, last);
+                first = i+1;
+            }
+        }
+        reverse(chars, first, chars.length - 1);
+        reverse(chars, 0, chars.length - 1);
+        System.out.println(Arrays.toString(chars));
     }
-}
-class Singleton{
-    public static int numA = 10;
-    public static Singleton singleton = new Singleton();
+    private static void reverse(char[] s, int first, int last){
+        if (first >= last) return;
+        while (first < last){
+            swap(s, first++, last--);
+        }
+    }
+    private static void allSort(){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.next();
 
-    static {
-        System.out.println("first");
-    }
-    private Singleton(){
-        System.out.println("Construct method");
-        System.out.println("construct numA and numB:" + numA + numB);
-        numA++;
-        numB++;
-        System.out.println("numA: " + numA);
-        System.out.println("numB: " + numB);
-    }
-    static {
-        System.out.println("before numB");
-    }
-    public static int numB = 8;
-    public static Singleton getInstance(){
-        System.out.println("getInstance method");
-        System.out.println("getInstance numB: " + numB);
-        System.out.println("getInstance numB: " + numA);
-        return singleton;
-    }
+        char[] s = str.toCharArray();
 
-    public static void Order(){
-        System.out.println("Order numB: " + numB);
-        numB = 323;
-        System.out.println("Order numB: " + numB);
+        permutation(s, 0, s.length - 1);
     }
-    static {
-        System.out.println("last");
-        System.out.println("last: " + numB);
-        numB = 50;
+    public static void permutation(char[] s,int from,int to) {
+        if(to <= 1)
+            return;
+        if(from == to) {
+            System.out.println(s);
+        } else {
+            for(int i=from; i<=to; i++) {
+                swap(s,i,from); //交换前缀，使其产生下一个前缀
+                permutation(s, from+1, to);
+                swap(s,from,i); //将前缀换回，继续做上一个前缀的排列
+            }
+        }
+    }
+    public static void swap(char[] s,int i,int j) {
+        char tmp = s[i];
+        s[i] = s[j];
+        s[j] = tmp;
+    }
+    private class ConstruTest{
     }
 }
